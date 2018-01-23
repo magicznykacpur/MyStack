@@ -28,9 +28,7 @@ class MyStackTest {
     void myStackPushTest() {
         fillStack(3, "testValue");
 
-        assertEquals("testValue", myStack.peak(0));
-        assertEquals("testValue", myStack.peak(1));
-        assertEquals("testValue", myStack.peak(2));
+        assertEquals("testValue", myStack.peak());
     }
 
     @Test
@@ -41,19 +39,19 @@ class MyStackTest {
 
     @Test
     void myStackPopTest() {
-        fillStack(3, "testValue");
+        fillStack(1, "testValue");
 
-        assertEquals("testValue", myStack.peak(2));
+        assertEquals("testValue", myStack.peak());
 
         myStack.pop();
 
-        assertNull(myStack.peak(2));
+        assertNull(myStack.peak());
     }
 
     @Test
     void myStackPeakTest() {
         myStack.push("Test value");
-        assertNotNull(myStack.peak(0));
+        assertNotNull(myStack.peak());
     }
 
     @Test
